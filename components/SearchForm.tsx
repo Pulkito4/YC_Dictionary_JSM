@@ -5,7 +5,7 @@ import Form from "next/form";
 const SearchForm = ({query}:{query?:string}) => {
 
 	return (
-		<Form action="/search" scroll={false} className="search-form">
+		<Form action="/" scroll={false} className="search-form">
 			{/* On submission, the input value will be appended to 
           the URL, e.g. /search?query=abc */}
 			<input
