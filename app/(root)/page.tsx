@@ -12,11 +12,12 @@ export default async function Home({
 	searchParams: Promise<{ query?: string }>;
 }) {
 	const query = (await searchParams).query;
+	const params = {search: query || null}
 
 	// const posts = await client.fetch(STARTUPS_QUERY);
 
 	// getting posts in real time without even refreshing the page
-	const {data:posts} = await sanityFetch({query : STARTUPS_QUERY});
+	const {data:posts} = await sanityFetch({query : STARTUPS_QUERY, params});
 
 	return (
 		<>
